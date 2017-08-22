@@ -32,6 +32,9 @@ class Connection(object):
         try:
             response.raise_for_status()
         except Exception as e:
+            print(path)
+            print(data)
+            print(headers)
             print(response.content)
             raise e
         # TODO(fotinakis): exception handling.
